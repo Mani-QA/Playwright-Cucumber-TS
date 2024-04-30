@@ -1,0 +1,19 @@
+{
+  "name": "playwright-cucumber",
+  "version": "1.0.0",
+  "description": "A Sample Playwright Automation framework built with Cucumber, PageObject Model and Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --config=cucumber.js"
+  },
+  "keywords": [],
+  "author": "Manivannan Gajendran",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.6.0",
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2"
+  }
+}
