@@ -35,12 +35,6 @@ Before(async function({pickle})
 
 After(async function({pickle, result})
 {
-    let SITEURL = process.env.npm_config_SITE;
-    
-    if (SITEURL === undefined)
-    {
-        SITEURL = "https://www.saucedemo.com/";
-    }
    
     
     if (result?.status == "FAILED") 
@@ -54,7 +48,7 @@ After(async function({pickle, result})
             img, "image/jpeg"
         );
 
-        await pageFixture.page.goto(SITEURL);
+    
     }
     else {
         console.log("Scenario Success");
