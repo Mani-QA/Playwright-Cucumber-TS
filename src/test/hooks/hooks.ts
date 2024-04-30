@@ -11,7 +11,7 @@ base=new Base();
 
 BeforeAll(async function()
 {
-    browser = await  chromium.launch({headless:false});
+    browser = await  chromium.launch({headless:true});
     //const context = await browser.newContext({ storageState: '/.auth/admin.json' });
    // page = await context.newPage();
     page = await browser.newPage();
