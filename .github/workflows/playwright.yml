@@ -6,8 +6,10 @@ on:
     branches: [ main, master ]
   schedule: 
      - cron: '*/30 * * * *'
-jobs:
+jobs:    
   test:
+    env:
+      CUCUMBER_PUBLISH_TOKEN: ${{ secrets.CUCUMBER_PUBLISH_TOKEN }} 
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -17,6 +19,8 @@ jobs:
         node-version: lts/*
     - name: Install dependencies
       run: npm ci
+    - name: Print cucumber token
+      run: echo ${{ secrets.CUCUMBER_PUBLISH_TOKEN }}
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
