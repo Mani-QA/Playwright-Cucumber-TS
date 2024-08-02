@@ -24,6 +24,7 @@ jobs:
     - uses: actions/upload-artifact@v4
       if: always()
       with:
+        CUCUMBER_PUBLISH_TOKEN: ${{ secrets.CUCUMBER_PUBLISH_TOKEN }} 
         name: playwright-report
         path: target/cucumber-report/
         retention-days: 30
