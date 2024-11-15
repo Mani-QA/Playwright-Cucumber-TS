@@ -41,3 +41,7 @@ if (SITEURL === undefined)
     Then('Login should fail', async function () {
        await login.verifyError("Epic sadface: Sorry, this user has been locked out.")
     });
+
+    Then('Login should fail because of incorrect password', async function () {
+       await login.verifyError("Epic sadface: Username and password do not match any user in this service")
+    });
