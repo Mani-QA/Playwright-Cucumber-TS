@@ -17,3 +17,9 @@ Feature: User Login Scenarios
         And User clicks on the Login button
         Then Login should fail
 
+    @All @Failure
+    Scenario: Login using Locked username
+        Given User enter the username as "standard_user"
+        And User enter the password as "incorrect_password"
+        And User clicks on the Login button
+        Then Login should fail because of incorrect password
